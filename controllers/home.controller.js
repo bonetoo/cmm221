@@ -1,5 +1,33 @@
 exports.index = function(req, res) {
-	res.render('home.twig')
+	
+	let content = {
+		highlight: {
+			url: '/assets/img/banner/highlight.jpg',
+			title: 'Hello'
+		},
+		thumbnail:[
+		{
+			url: '/assets/img/banner/thumbnail-1.jpg',
+			title: 'thumbnail-1'
+		},
+		{
+			url: '/assets/img/banner/thumbnail-2.jpg',
+			title: 'thumbnail-2'
+		},{
+			url: '/assets/img/banner/thumbnail-3.jpg',
+			title: 'thumbnail-3'
+		},{
+			url: '/assets/img/banner/thumbnail-4.jpg',
+			title: 'thumbnail-4'
+		},
+		{
+			url: '/assets/img/banner/thumbnail-5.jpg',
+			title: 'thumbnail-5'
+		}
+
+		]
+	} 
+		res.render('home.twig' , content)
 }
 	/*let content = {
 		banner: [
